@@ -7,9 +7,9 @@
 4. Добавьте нужные названия и RSS ленты в файл "rss.xml", для примера, в нем уже добавлены две RSS ленты и несколько сериалов для проверки.<br>
 5. Добавьте "RSS checker" в автозагрузку.<br>
 ## Фильтры
-Поиск происходит по атрибуту search, например, search="The Americans". В этом случае в событии RSS ленты будет искаться название "The Americans". Искать лучше именно названия на английском, чтобы не было проблем с кодировками.<br>
+Поиск происходит по атрибуту search, например, search="The Americans". В этом случае в событии RSS ленты будет искаться название "The Americans". Искать названия лучше на английском, чтобы не было проблем с кодировками.<br>
 Игнорирование происходит по атрибуту ignore, например, ignore="720p;1080p;". В этом случае будут игнорироваться названия со строками "720p" и "1080p".<br>
-Значение параметра "name" необходимо для приложения уведомлений.<br><br>
+Значение параметра "name" необходимо для приложения уведомлений.<br>
 ## Уведомление
 Элемент RSS содержит атрибут "notification", который будет отображаться в уведомлении о новом событии. Также можно добавить иконки в уведомление, для этого необходимо добавить изображения в папку "Icons" программы уведомлений и изменить атрибуты big-icon="1.png" и small-icon="2.png", написав в них названия изображений. Большая иконка имеет размер 90 на 90 пикселей, а маленькая 30 на 30, более подробно можно прочитать [тут](https://github.com/r57zone/notifications).<br> 
 ## Скриншот
@@ -31,9 +31,9 @@ Notification of a new event published in RSS. For example, can set up a notifica
 ## Filters
 The search is based on the search attribute, for example, search="The Americans". In this case, the name "The Americans" will be searched for in the RSS feed event. Search for better names in English, so that there are no problems with encodings.<br>
 Ignoring occurs on the ignore attribute, for example, ignore="720p;1080p;". In this case, the names with the lines "720p" and "1080p" will be ignored.<br>
-The value of the "name" parameter is required for the notification application.<br><br>
+The value of the "name" parameter is required for the notification application.<br>
 ## Notification
-The RSS element contains the "notification" attribute, which will be displayed in the notification of the new event. You can also add icons to the notification by adding images to the "Icons" folder of the notification program and changing the attributes big-icon = "1.png" and small-icon = "2.png" by writing the image names in them. A large icon has a size of 90 by 90 pixels, and a small one is 30 by 30, you can read more [here](https://github.com/r57zone/notifications).<br> 
+The RSS element contains the "notification" attribute, which will be displayed in the notification of the new event. You can also add icons to the notification by adding images to the "Icons" folder of the notification program and changing the attributes big-icon="1.png" and small-icon="2.png" by writing the image names in them. A large icon has a size of 90 by 90 pixels, and a small one is 30 by 30, you can read more [here](https://github.com/r57zone/notifications).<br> 
 ## Download
 >Version for Windows XP, 7, 8.1, 10.<br>
 >If you need a program with an English translation, please write to email and I'll will build it soon.<br>
