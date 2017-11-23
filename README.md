@@ -7,7 +7,7 @@
 4. Добавьте нужные названия и RSS ленты в файл "rss.xml", для примера, в нем уже добавлены две RSS ленты и несколько сериалов для проверки.<br>
 5. Добавьте "RSS checker" в автозагрузку.<br>
 ## Фильтры
-Поиск происходит по атрибуту search, например, search="The Americans". В этом случае в событии RSS ленты будет искаться название "The Americans". Искать названия лучше на английском, чтобы не было проблем с кодировками.<br>
+Поиск происходит по атрибуту search, например, search="The Americans". В этом случае в событии RSS ленты будет искаться название "The Americans". Искать названия лучше на латинице, чтобы не было проблем с кодировками.<br>
 Игнорирование происходит по атрибуту ignore, например, ignore="720p;1080p;". В этом случае будут игнорироваться названия со строками "720p" и "1080p".<br>
 Значение параметра "name" необходимо для приложения уведомлений.<br>
 ## Уведомление
@@ -29,7 +29,7 @@ Notification of a new event published in RSS. For example, can set up a notifica
 4. Add the necessary titles and RSS feeds to the file "rss.xml", for example, it already has two RSS feeds and several serials for verification.<br>
 5. Add the "RSS checker" to startup.<br>
 ## Filters
-The search is based on the search attribute, for example, search="The Americans". In this case, the name "The Americans" will be searched for in the RSS feed event. Search for better names in English, so that there are no problems with encodings.<br>
+The search is based on the search attribute, for example, search="The Americans". In this case, the name "The Americans" will be searched for in the RSS feed event.<br>
 Ignoring occurs on the ignore attribute, for example, ignore="720p;1080p;". In this case, the names with the lines "720p" and "1080p" will be ignored.<br>
 The value of the "name" parameter is required for the notification application.<br>
 ## Notification
