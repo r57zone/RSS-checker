@@ -2,7 +2,7 @@ object Main: TMain
   Left = 192
   Top = 124
   BorderStyle = bsSingle
-  Caption = 'RSS checker'
+  Caption = 'RSS '#1089'hecker'
   ClientHeight = 193
   ClientWidth = 312
   Color = clBtnFace
@@ -25,23 +25,20 @@ object Main: TMain
   object PopupMenu: TPopupMenu
     Left = 40
     Top = 8
-    object N1: TMenuItem
+    object RemLinksBtn: TMenuItem
       Caption = #1054#1095#1080#1089#1090#1080#1090#1100
-      OnClick = N1Click
+      OnClick = RemLinksBtnClick
     end
-    object N3: TMenuItem
+    object LineItem: TMenuItem
       Caption = '-'
     end
     object AboutBtn: TMenuItem
       Caption = #1054' '#1087#1088#1086#1075#1088#1072#1084#1084#1077'...'
       OnClick = AboutBtnClick
     end
-    object N2: TMenuItem
-      Caption = '-'
-    end
-    object ExitBtn: TMenuItem
+    object CloseBtn: TMenuItem
       Caption = #1042#1099#1093#1086#1076
-      OnClick = ExitBtnClick
+      OnClick = CloseBtnClick
     end
   end
 end
