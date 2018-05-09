@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<tree>
+	<feeds>
+		<rss notification="Вышла новая серия" big-icon="1.png" small-icon="2.png" color="2" name="LostFilm.TV" url="http://retre.org/rssdd.xml" cookie="uid=000;pass=000;usess=000" download="false">
+			<name ignore="HD;720;MP4;1080;" search="(Homeland)">Родина</name>
+			<name ignore="HD;720;MP4;1080;" search="(Bates Motel)">Мотель Бейтса</name>
+		</rss>
+		
+		<rss notification="Вышла новая серия" big-icon="1.png" small-icon="2.png" color="2" name="NewStudio.TV" url="http://newstudio.tv/rss.php?user=000&amp;pass=000" cookie="" download="false">
+			<name ignore="720p;1080p;" search="Better Call Saul">Лучше звоните Солу</name>
+			<name ignore="720p;1080p;" search="The Americans">Американцы</name>
+			<name ignore="720p;1080p;" search="The Girlfriend Experience">Девушка по вызову</name>
+			<name ignore="720p;1080p;" search="Orange Is the New Black">Оранжевый - хит сезона</name>
+		</rss>
+	</feeds>
+</tree>

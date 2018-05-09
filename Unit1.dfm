@@ -41,4 +41,31 @@ object Main: TMain
       OnClick = CloseBtnClick
     end
   end
+  object IdHTTP: TIdHTTP
+    IOHandler = IdSSLIOHandlerSocket
+    MaxLineAction = maException
+    ReadTimeout = 0
+    AllowCookies = True
+    HandleRedirects = True
+    ProxyParams.BasicAuthentication = False
+    ProxyParams.ProxyPort = 0
+    Request.ContentLength = -1
+    Request.ContentRangeEnd = 0
+    Request.ContentRangeStart = 0
+    Request.ContentType = 'text/html'
+    Request.Accept = 'text/html, */*'
+    Request.BasicAuthentication = False
+    Request.UserAgent = 'Mozilla/4.0 (MSIE 6.0; Windows NT 5.1)'
+    HTTPOptions = [hoForceEncodeParams]
+    Left = 72
+    Top = 8
+  end
+  object IdSSLIOHandlerSocket: TIdSSLIOHandlerSocket
+    SSLOptions.Method = sslvTLSv1
+    SSLOptions.Mode = sslmUnassigned
+    SSLOptions.VerifyMode = []
+    SSLOptions.VerifyDepth = 0
+    Left = 104
+    Top = 8
+  end
 end
