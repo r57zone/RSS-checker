@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, XMLDoc, XMLIntf, ShellAPI, ExtCtrls, IniFiles,
   Menus, IdBaseComponent, IdComponent, IdTCPConnection, IdTCPClient, IdHTTP,
-  IdIOHandler, IdIOHandlerSocket, IdSSLOpenSSL, RegExpr;
+  IdIOHandler, IdIOHandlerSocket, IdSSLOpenSSL, RegExpr, Registry;
 
 type
   TMain = class(TForm)
@@ -111,15 +111,26 @@ begin
   end;
 end;
 
+function GetNotificationAppPath: string;
+var
+  Reg: TRegistry;
+begin
+  Reg:=TRegistry.Create;
+  Reg.RootKey:=HKEY_CURRENT_USER;
+  if Reg.OpenKey('\Software\r57zone\Notification', false) then begin
+      Result:=Reg.ReadString('Path');
+    Reg.CloseKey;
+  end;
+  Reg.Free;
+end;
+
 procedure TMain.FormCreate(Sender: TObject);
 var
   Ini: TIniFile;
 begin
   Ini:=TIniFile.Create(ExtractFilePath(ParamStr(0)) + 'Setup.ini');
   Timer.Interval:=Ini.ReadInteger('Main', 'CheckInterval', 20) * 60000; //Минуты
-  NotificationApp:=Ini.ReadString('Main', 'NotificationApp', '');
-  if (NotificationApp <> '') and (FileExists(NotificationApp) = false) then
-    NotificationApp:='';
+  NotificationApp:=GetNotificationAppPath;
   LangFile:=Ini.ReadString('Main', 'Language', 'English');
   DownloadPath:=Ini.ReadString('Main', 'DownloadPath', '');
   if Trim(DownloadPath) = '' then begin
@@ -237,9 +248,9 @@ begin
                 NotificationSmallIcon:=FeedsNode.ChildNodes[i].Attributes['small-icon'];
 
                 if NotificationApp <> '' then
-                  WinExec(PChar(NotificationApp + ' "' + FeedName +
-                    '" "' + NotificationValue + '" "' + FeedItem + '" "' + NotificationBigIcon + '" "' +
-                    NotificationSmallIcon + '" ' + NotificationColor + ''), SW_SHOWNORMAL);
+                  WinExec(PChar(NotificationApp + ' -t "' + FeedName +
+                    '" -d "' + NotificationValue + '\n' + FeedItem + '" -b "' + NotificationBigIcon + '" -s "' +
+                    NotificationSmallIcon + '" -c ' + NotificationColor), SW_SHOWNORMAL);
 
                 if AnsiLowerCase(FeedsNode.ChildNodes[i].Attributes['download']) = 'true' then begin
                   DownloadTorrent(ItemLink, FeedsNode.ChildNodes[i].Attributes['cookie'], DownloadPath, DownloadedFile);
