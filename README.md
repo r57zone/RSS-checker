@@ -4,7 +4,7 @@
 Notification of a new event published in RSS. For example, can set up a notification for the release of a new series of the tv show and download torrent.
 
 ## Setup
-1. [Download notification app](https://github.com/r57zone/notifications) and extract him to folder "C:\Program Files\Notification".<br>
+1. [Download notification app](https://github.com/r57zone/notifications) and extract him to folder "C:\Program Files\Notification" and run.<br>
 2. In the file "Setup.ini", located in the folder downloaded "RSS checker". You can change the interval for checking RSS feeds, the default is every 20 minutes.<br>
 3. (Not necessary) [Download notification center](https://github.com/r57zone/Notification-center), for not to skip the notification when you leave the computer, unpack it somewhere and add to the startup ("Start" -> "All Programs" -> "Startup").<br>
 4. Add the necessary titles and RSS feeds to the file "rss.xml", for example, it already has two RSS feeds and several serials for verification.<br>
@@ -17,13 +17,14 @@ The value of the "name" parameter is required for the notification application.<
 The parameter "download" is responsible for downloading torrents (false - no and true - yes). If necessary, you can add cookies for RSS feeds, the parameter "cookie". To automatically add a torrent to the boot program, you must change the "DownloaderPath" parameter in the "Setup.ini" file.
 
 ## Notification
-For notifications, you need to download, unzip and run [notification for programs](https://github.com/r57zone/notifications). Configuration file "RSS.xml" contains the "notification" attributes, which will be displayed in the notification of the new event. You can also add icons to the notification by adding images to the "Icons" folder of the notification program and changing the attributes big-icon="1.png" and small-icon="2.png" by writing the image names in them. A large icon has a size of 90 by 90 pixels, and a small one is 30 by 30. 
+Configuration file "RSS.xml" contains the "notification" attributes, which will be displayed in the notification of the new event. You can also add icons to the notification by adding images to the "Icons" folder of the notification program and changing the attributes big-icon="1.png" and small-icon="2.png" by writing the image names in them. A large icon has a size of 90 by 90 pixels, and a small one is 30 by 30. 
 
 ## Screenshot
 ![](https://user-images.githubusercontent.com/9499881/34340035-02dc76d2-e996-11e7-9a6d-71ddb14dbc8d.png)<br>
 
 ## Download
->Version for Windows XP, 7, 8.1, 10.<br>
+>Version for Windows XP, 7, 8.1, 10.
+
 **[Donwload](https://github.com/r57zone/RSS-checker/releases)**
 
 ## Feedback
